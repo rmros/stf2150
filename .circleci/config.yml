@@ -28,9 +28,9 @@ jobs:
           name: build and push Docker image
           command: |
             TAG=0.1.$CIRCLE_BUILD_NUM
-            docker build --rm=false -t   rmros/docker-rails-sample:$TAG .
+            docker build --rm=false -t   ${DOCKERHUB_LOGIN}/${DOCKERHUB_URI}:$TAG .
             docker login -u $DOCKERHUB_LOGIN -p $DOCKERHUB_PASSWORD
-            docker push rmros/docker-rails-sample:$TAG
+            docker push ${DOCKERHUB_LOGIN}/${DOCKERHUB_URI}:$TAG
   deploy:
     machine:
       image: circleci/classic:edge
