@@ -64,3 +64,5 @@ HEROKU_APP_NAME="your-herokuapp-name"
 ```
 
 When `git push origin master` CircleCI deploy docker container to heroku container registroy and run `rails db:migrate`
+# stf2150
+# stf2150
